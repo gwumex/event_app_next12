@@ -1,19 +1,15 @@
 import Image from 'next/image'
 import React from 'react'
+import SingleEvent from '../../../src/component/events/single-event'
 
 const EventPage = ({data}) => {
-  console.log(data);
   return (
-    <div>
-      {/* <Image src={data.image} width={500} height={300} alt={data.title}/> */}
-      <h1>{data.title}</h1>
-      <p>{data.description}</p>
-    </div>
+    <SingleEvent data={data}/>
+
   )
 }
 
 export default EventPage
-
 
 export async function getStaticPaths() {
   const data = await import('/data/data.json');
