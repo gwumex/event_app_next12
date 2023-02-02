@@ -5,7 +5,6 @@ import SingleEvent from '../../../src/component/events/single-event'
 const EventPage = ({data}) => {
   return (
     <SingleEvent data={data}/>
-
   )
 }
 
